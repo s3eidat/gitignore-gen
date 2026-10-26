@@ -1,0 +1,15 @@
+.gi-grid { align-items: start; }
+.gi-chips { display: grid; gap: 10px; max-height: 420px; overflow: auto; padding-right: 4px; }
+.gi-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.gi-glabel { width: 100%; font-size: 11.5px; font-weight: 650; text-transform: uppercase; letter-spacing: .05em; color: var(--text-3); }
+.gi-chip { padding: 6px 12px; border-radius: 999px; font-size: 13px; font-weight: 550; color: var(--text-2); background: var(--surface-2); border: 1px solid var(--line); transition: background var(--dur), border-color var(--dur), color var(--dur); }
+.gi-chip:hover { border-color: var(--line-strong); color: var(--text); }
+.gi-chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.gi-chip[aria-pressed="true"]::before { content: "✓ "; }
+.gi-presets { gap: 6px; }
+.gi-custom { min-height: 90px; }
+.gi-out { min-height: 520px; max-height: 760px; overflow: auto; white-space: pre; word-break: normal; margin: 0; }
+.gi-out .empty { white-space: normal; }
+.gi-h { color: var(--accent); font-weight: 700; }
+.gi-c { color: var(--text-3); }
+.gi-n { color: var(--ok); }

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' data: blob:; connect-src 'self' data: blob:; worker-src 'self' blob:; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Gitignore Gen — Free .gitignore Generator for Any Stack | S3eidat Tools</title>
+<meta name="description" content="Build a .gitignore for Node, Python, Java, Android, iOS, Flutter, Unity, Go, Rust, .NET, PHP, Next.js, Docker, Terraform, macOS, Windows, VS Code, JetBrains and more. Merged, deduplicated, with your own lines. Free, private, offline.">
+<meta property="og:title" content="Gitignore Gen — .gitignore files for any stack">
+<meta property="og:description" content="Pick your stack, get a merged and deduplicated .gitignore. Runs 100% in your browser.">
+<link rel="icon" href="kit/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="kit/kit.css">
+<link rel="stylesheet" href="app.css">
+<script src="kit/kit.js"></script>
+<!--s3:seo-->
+<link rel="canonical" href="https://s3eidat.github.io/gitignore-gen/">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d0f12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="S3eidat Tools">
+<meta property="og:url" content="https://s3eidat.github.io/gitignore-gen/">
+<meta property="og:image" content="https://s3eidat.github.io/gitignore-gen/screenshot.png">
+<meta property="og:image:width" content="1280"><meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gitignore Gen — .gitignore files for any stack">
+<meta name="twitter:description" content=".gitignore files for any stack. Free, private and runs 100% in your browser: no sign-up, no uploads.">
+<meta name="twitter:image" content="https://s3eidat.github.io/gitignore-gen/screenshot.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Gitignore Gen", "url": "https://s3eidat.github.io/gitignore-gen/", "description": ".gitignore files for any stack. Free, private and runs 100% in your browser: no sign-up, no uploads.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://s3eidat.github.io/gitignore-gen/screenshot.png", "author": {"@type": "Person", "name": "s3eidat", "url": "https://github.com/s3eidat"}}</script>
+<!--/s3:seo-->
+</head>
+<body data-tool="gitignore-gen">
+<main class="s3-main">
+  <section class="s3-hero">
+    <h1>Gitignore Gen</h1>
+    <p>Pick your languages, frameworks, editors and operating systems and get one clean <code>.gitignore</code>: merged, deduplicated and commented.</p>
+  </section>
+
+  <div class="grid-2 gi-grid">
+    <section class="card stack">
+      <div class="row between">
+        <h2>Templates <small id="count"></small></h2>
+        <button class="btn ghost small" id="none">Clear selection</button>
+      </div>
+      <label class="field"><span class="sr">Search templates</span>
+        <input class="input" id="search" type="search" placeholder="Search: node, python, unity, mac…" autocomplete="off">
+      </label>
+      <div class="gi-chips" id="chips" role="group" aria-label="Templates"></div>
+      <div class="row gi-presets">
+        <span class="faint">Quick picks:</span>
+        <button class="btn small" data-preset="node,nextjs,vscode,macos,windows">Next.js app</button>
+        <button class="btn small" data-preset="python,django,vscode,jetbrains,linux">Django</button>
+        <button class="btn small" data-preset="flutter,android,ios,vscode,macos">Flutter</button>
+        <button class="btn small" data-preset="unity,vscode,windows,macos">Unity game</button>
+      </div>
+      <label class="field">Your own lines (added at the end)
+        <textarea class="textarea gi-custom" id="custom" spellcheck="false" placeholder="secrets/&#10;*.local.json&#10;!keep-me.log"></textarea>
+      </label>
+      <div class="row">
+        <label class="check"><input type="checkbox" id="headers" checked> Section headers</label>
+        <label class="check"><input type="checkbox" id="dedupe" checked> Remove duplicate lines</label>
+      </div>
+    </section>
+
+    <section class="card stack">
+      <div class="row between">
+        <h2>.gitignore <small id="info"></small></h2>
+        <div class="row">
+          <button class="btn small" id="copy"><svg class="i"><use href="#i-copy"/></svg>Copy</button>
+          <button class="btn small primary" id="save"><svg class="i"><use href="#i-download"/></svg>.gitignore</button>
+        </div>
+      </div>
+      <pre class="out gi-out" id="out" tabindex="0"></pre>
+    </section>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
